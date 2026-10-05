@@ -34,7 +34,7 @@ export default function ProjectsPage() {
   return (
     <>
       <header className="section-divider bg-[var(--surface)]">
-        <div className="container-page section !py-10 md:!py-14">
+        <div className="container-page section !py-12 md:!py-14">
           <div className="flex max-w-3xl flex-col gap-5">
             <p className="text-label text-[var(--primary)]">Projects</p>
             <h1 className="text-display">Data analysis case studies</h1>

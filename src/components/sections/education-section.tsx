@@ -39,7 +39,7 @@ export function EducationSection() {
                     href={t.orgUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex w-fit items-center gap-1.5 rounded-sm text-sm font-semibold text-[var(--primary)] hover:underline"
+                    className="-my-1 inline-flex w-fit items-center gap-1.5 rounded-sm py-1 text-sm font-semibold text-[var(--primary)] hover:underline"
                   >
                     <GraduationCap aria-hidden="true" className="size-4" />
                     {t.org}

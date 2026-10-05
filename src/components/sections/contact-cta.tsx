@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowRight, FileText, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
@@ -51,10 +50,10 @@ export function ContactCta() {
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
               <Button asChild size="lg" className="h-12 px-6">
-                <Link href="/resume">
+                <a href="/resume">
                   <FileText aria-hidden="true" className="size-4.5" />
                   View resume
-                </Link>
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="h-12 px-6">
                 <a href={SITE.email}>

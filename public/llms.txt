@@ -28,7 +28,7 @@ This site is the personal portfolio of Muskan Choudhary. It documents four end-t
 - [Home](https://muskan-portfolio.vercel.app/): hero, about, skills, projects, education, FAQ
 - [Projects](https://muskan-portfolio.vercel.app/projects): index of all four case studies
 - [About](https://muskan-portfolio.vercel.app/about): background, education, verifiable links, working approach
-- [Resume](https://muskan-portfolio.vercel.app/resume): view or download the one-page CV as PDF
+- [Resume](https://muskan-portfolio.vercel.app/resume): the one-page CV, served directly as a PDF that opens in the browser's own reader
 - [Contact](https://muskan-portfolio.vercel.app/contact): email, LinkedIn, GitHub, university
 
 ## Case studies

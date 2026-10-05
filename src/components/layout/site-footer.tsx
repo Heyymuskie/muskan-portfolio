@@ -46,17 +46,27 @@ export function SiteFooter() {
                 { href: "/projects", label: "Projects" },
                 { href: "/about", label: "About" },
                 { href: "/contact", label: "Contact" },
-                { href: "/resume", label: "Resume" },
-              ].map((l) => (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    className="inline-flex min-h-6 items-center text-[var(--muted-foreground)] transition-colors hover:text-[var(--foreground)]"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
+                { href: "/resume", label: "View resume" },
+              ].map((l) => {
+                const cls =
+                  "inline-flex min-h-6 items-center text-[var(--muted-foreground)] transition-colors hover:text-[var(--foreground)]";
+                // `/resume` answers with a PDF, so it must be a real document
+                // navigation — a client-side transition would try to hydrate
+                // binary data instead of handing off to the built-in reader.
+                return l.href === "/resume" ? (
+                  <li key={l.href}>
+                    <a href={l.href} className={cls}>
+                      {l.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={l.href}>
+                    <Link href={l.href} className={cls}>
+                      {l.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
@@ -109,7 +119,7 @@ export function SiteFooter() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-[var(--line)] pt-6 text-sm text-[var(--muted-foreground)] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {YEAR} {PROFILE.fullName}. Built with Next.js and Tailwind CSS.
+            © {YEAR} {PROFILE.fullName}.
           </p>
           <p className="sm:text-right">
             Available for {PROFILE.openTo[0]} roles.

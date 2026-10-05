@@ -124,6 +124,20 @@ export function ProfilePageJsonLd() {
         inLanguage: "en-IN",
         isPartOf: { "@id": `${SITE.url}/#website` },
         mainEntity: { "@id": `${SITE.url}/#person` },
+        // `/resume` is served as a PDF by a route handler, so it cannot carry
+        // its own JSON-LD. The document is described here instead, which keeps
+        // the resume inside the site's primary structured-data graph.
+        hasPart: {
+          "@type": "DigitalDocument",
+          "@id": `${SITE.url}/#resume`,
+          name: `${PROFILE.fullName} — Curriculum Vitae`,
+          url: `${SITE.url}${SITE.resumePath}`,
+          encodingFormat: "application/pdf",
+          inLanguage: "en-IN",
+          datePublished: "2026-01-01",
+          author: { "@id": `${SITE.url}/#person` },
+          about: SITE.role,
+        },
       }}
     />
   );

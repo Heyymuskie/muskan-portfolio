@@ -28,9 +28,19 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
           },
-          // SAMEORIGIN (not DENY) so the embedded resume PDF on /resume
-          // still renders inside this site's own viewer.
+          // SAMEORIGIN (not DENY) so first-party resources — notably the PDF
+          // served by /resume — can still be framed by this site itself.
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
+        ],
+      },
+      {
+        // /resume is the canonical, crawlable URL for the CV. The raw asset
+        // stays reachable for direct sharing, but is kept out of the index so
+        // search engines only ever see one copy of the PDF.
+        source: "/Muskan-Choudhary-Resume.pdf",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex" },
+          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
         ],
       },
       {

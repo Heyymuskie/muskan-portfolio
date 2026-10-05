@@ -83,7 +83,7 @@ export default function ContactPage() {
       />
 
       <header className="section-divider bg-[var(--surface)]">
-        <div className="container-page section !py-10 md:!py-14">
+        <div className="container-page section !py-12 md:!py-14">
           <div className="grid gap-9 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-6">
               <p className="text-label text-[var(--primary)]">Contact</p>
@@ -103,9 +103,9 @@ export default function ContactPage() {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="h-12 px-6">
-                  <a href="/resume" download="Muskan-Choudhary-Resume.pdf">
+                  <a href="/resume">
                     <FileText aria-hidden="true" className="size-4.5" />
-                    Download resume
+                    View resume
                   </a>
                 </Button>
               </div>
@@ -183,9 +183,9 @@ export default function ContactPage() {
             single page.
           </p>
           <Button asChild size="lg" className="h-11 shrink-0 px-5">
-            <a href="/resume" target="_blank" rel="noopener noreferrer">
+            <a href="/resume">
               <FileText aria-hidden="true" className="size-4" />
-              Open resume
+              View resume
             </a>
           </Button>
         </div>

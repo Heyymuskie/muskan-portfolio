@@ -20,7 +20,8 @@ export const SITE = {
     "Portfolio of Muskan Choudhary, a Data Analyst skilled in SQL, Power BI, Excel and Python. B.Tech CSE student at Jagannath University, Jaipur, building dashboards and data pipelines that turn raw data into decisions.",
   email: "muskanchy05@gmail.com",
   image: "/images/muskan.jpg",
-  resumePath: "/Muskan-Choudhary-Resume.pdf",
+  /** Served by `src/app/resume/route.ts` — the route *is* the PDF. */
+  resumePath: "/resume",
   locale: "en_IN",
   type: "website",
   keywords: [

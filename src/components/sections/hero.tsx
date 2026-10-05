@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Download, FileText, MapPin } from "lucide-react";
+import { ArrowRight, FileText, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { HERO, STATS } from "@/data/content";
@@ -61,10 +61,10 @@ export function Hero() {
           {/* Primary CTAs */}
           <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row sm:items-center">
             <Button asChild size="lg" className="h-12 px-6 text-base">
-              <Link href="/resume">
+              <a href="/resume">
                 <FileText aria-hidden="true" className="size-4.5" />
-                View my resume
-              </Link>
+                View resume
+              </a>
             </Button>
 
             <Button asChild size="lg" variant="outline" className="h-12 px-6 text-base">
@@ -93,12 +93,6 @@ export function Hero() {
               <a href={LINKS.github} target="_blank" rel="noopener noreferrer">
                 <GithubIcon className="size-4" />
                 GitHub
-              </a>
-            </Button>
-            <Button asChild size="sm" variant="ghost" className="h-9 gap-2 text-[var(--muted-foreground)]">
-              <a href={SITE.resumePath} target="_blank" rel="noopener noreferrer">
-                <Download aria-hidden="true" className="size-4" />
-                Download CV
               </a>
             </Button>
           </div>

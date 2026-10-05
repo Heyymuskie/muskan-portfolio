@@ -35,7 +35,8 @@ fetching — so pages ship as pre-rendered HTML and stay fast on a free-tier dep
 | Layout safety | One `.container-page` + one `.section` rhythm for every section, so horizontal padding and vertical gaps cannot drift between breakpoints. |
 | Overflow | `overflow-x: hidden` on `body`, `min-w-0` on every flex/grid child that holds text. |
 | Accessibility | Skip link, one `h1` per page, visible `:focus-visible` ring, `prefers-reduced-motion` honoured, WCAG AA contrast on both palettes. |
-| Headers | `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `X-Frame-Options: SAMEORIGIN` (needed by the embedded resume viewer). |
+| Headers | `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `X-Frame-Options: SAMEORIGIN` (first-party framing), `X-Robots-Tag: noindex` on the raw PDF so only `/resume` is indexed. |
+| Resume | `/resume` is a route handler, not a page: it answers `application/pdf` so the browser's own reader opens it full-viewport. Zero iframes, zero client JS, and the file is only ever requested after a click. |
 
 ---
 
@@ -48,7 +49,7 @@ src/
     page.tsx                   home
     projects/page.tsx          case-study index
     projects/[slug]/page.tsx   the four case studies (generateStaticParams)
-    resume/page.tsx            dynamic resume viewport
+    resume/route.ts             serves the CV as `application/pdf` (no page)
     about/page.tsx             EEAT narrative + verifiable links
     contact/page.tsx           channels + availability
     not-found.tsx              branded 404
@@ -58,7 +59,6 @@ src/
     layout/                    site header (mobile sheet) + footer
     sections/                  hero, about, skills, projects, education, faq, contact
     projects/project-card.tsx  card with a dedicated "View case study" button
-    resume/resume-viewer.tsx   desktop reader / mobile hero switch
     json-ld.tsx                Person, WebSite, ProfilePage, FAQPage, BreadcrumbList
     icons.tsx                  LinkedIn + GitHub marks (lucide v1 dropped brands)
   data/

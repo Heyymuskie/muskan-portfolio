@@ -116,7 +116,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
       {/* ---------------- Header ---------------- */}
       <header className="section-divider bg-[var(--surface)]">
-        <div className="container-page section !py-10 md:!py-14">
+        <div className="container-page section !py-12 md:!py-14">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[var(--muted-foreground)]">
               {breadcrumbs.map((b, i) => (
@@ -129,7 +129,7 @@ export default async function CaseStudyPage({ params }: Props) {
                   ) : (
                     <Link
                       href={b.path}
-                      className="rounded-sm transition-colors hover:text-[var(--foreground)]"
+                      className="-mx-0.5 rounded-sm py-1.5 transition-colors hover:text-[var(--foreground)]"
                     >
                       {b.name}
                     </Link>

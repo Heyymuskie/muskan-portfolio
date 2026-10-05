@@ -82,20 +82,20 @@ export function SiteHeader() {
         {/* Desktop CTA */}
         <div className="hidden items-center gap-2 lg:flex">
           <Button asChild size="sm" className="h-9 px-4">
-            <Link href="/resume">
+            <a href="/resume">
               <FileText aria-hidden="true" className="size-4" />
               View resume
-            </Link>
+            </a>
           </Button>
         </div>
 
         {/* Mobile trigger */}
         <div className="flex items-center gap-2 lg:hidden">
           <Button asChild size="sm" variant="outline" className="h-9 px-3">
-            <Link href="/resume">
+            <a href="/resume" aria-label="View resume">
               <FileText aria-hidden="true" className="size-4" />
-              <span className="hidden sm:inline">Resume</span>
-            </Link>
+              <span className="hidden sm:inline">View resume</span>
+            </a>
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
@@ -140,10 +140,10 @@ export function SiteHeader() {
 
               <div className="mt-auto flex flex-col gap-2 pt-4">
                 <Button asChild size="lg" className="h-11 w-full">
-                  <Link href="/resume">
+                  <a href="/resume">
                     View resume
                     <ArrowUpRight aria-hidden="true" className="size-4" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="h-11 w-full">
                   <a href={`mailto:${SITE.email}`}>Email me</a>

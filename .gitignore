@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI / agent instruction files (rewritten locally by `next dev`)
+AGENTS.md
+CLAUDE.md
+
+# local tooling / editors
+.opencode/
+.claude/
+.cursor/
+.vscode/
+.idea/
+*.swp
+
+# OS junk
+Thumbs.db
+desktop.ini

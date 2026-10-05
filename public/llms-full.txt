@@ -269,13 +269,9 @@ How I work:
 8. RESUME — https://muskan-portfolio.vercel.app/resume
 ======================================================================
 
-H1: Muskan Choudhary — Curriculum Vitae
-Sub: Data Analyst · SQL · Power BI · Excel · Python · Jaipur, Rajasthan
+This URL serves the one-page CV itself: the response is `application/pdf`, so a browser opens it in its own built-in PDF reader at full viewport. There is no separate HTML page, no embedded frame and no script — and nothing is requested at all until a visitor selects "View resume". Every "View resume" link in the site navigation, hero, footer, about, contact and closing call-to-action points at this same URL. Downloading is left to the reader's own controls.
 
-The resume is a one-page PDF. On laptops and desktops it is displayed in a full-height viewer. On small screens (mobile and tablet) the page shows the navigation and hero with two actions.
-
-- View: opens the PDF in the browser's built-in reader — https://muskan-portfolio.vercel.app/Muskan-Choudhary-Resume.pdf
-- Download: same URL, downloaded with the browser's normal download behaviour.
+The document: Muskan Choudhary — Curriculum Vitae. Data Analyst · SQL · Power BI · Excel · Python · Jaipur, Rajasthan.
 
 Resume content summary:
 - Header: Muskan Choudhary — Data Analyst | SQL | Power BI | Excel | Python. Email muskanchy05@gmail.com, Jaipur, Rajasthan, linkedin.com/in/muskiee

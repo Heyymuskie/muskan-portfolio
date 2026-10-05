@@ -73,7 +73,7 @@ export default function AboutPage() {
       <FaqJsonLd faqs={FAQS} />
 
       <header className="section-divider bg-[var(--surface)]">
-        <div className="container-page section !py-10 md:!py-14">
+        <div className="container-page section !py-12 md:!py-14">
           <div className="grid gap-9 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-7">
               <p className="text-label text-[var(--primary)]">About</p>
@@ -89,10 +89,10 @@ export default function AboutPage() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg" className="h-11 px-5">
-                  <Link href="/resume">
+                  <a href="/resume">
                     <FileText aria-hidden="true" className="size-4" />
                     View resume
-                  </Link>
+                  </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="h-11 px-5">
                   <Link href="/projects">Read the case studies</Link>
@@ -185,7 +185,7 @@ export default function AboutPage() {
                       href={t.orgUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-[var(--primary)] hover:underline"
+                      className="-my-1 inline-flex w-fit items-center gap-1.5 py-1 text-sm font-semibold text-[var(--primary)] hover:underline"
                     >
                       {t.org}
                       <ExternalLink aria-hidden="true" className="size-3.5" />
