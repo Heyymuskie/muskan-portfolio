@@ -77,7 +77,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span>Jagannath University, Jaipur · B.Tech CSE</span>
-          <span style={{ color: "#62b6f7" }}>muskan-portfolio.vercel.app</span>
+          <span style={{ color: "#62b6f7" }}>muskan-choudhary.vercel.app</span>
         </div>
       </div>
     ),

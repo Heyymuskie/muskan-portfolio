@@ -11,7 +11,7 @@ export const SITE = {
   name: "Muskan Choudhary",
   legalName: "Muskan Choudhary",
   /** Production origin — used for canonicals, OG, sitemap and JSON-LD. */
-  url: "https://muskan-portfolio.vercel.app",
+  url: "https://muskan-choudhary.vercel.app",
   title: "Muskan Choudhary — Data Analyst",
   tagline: "Data Analyst",
   role: "Data Analyst",

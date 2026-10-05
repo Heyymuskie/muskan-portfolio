@@ -25,18 +25,18 @@ This site is the personal portfolio of Muskan Choudhary. It documents four end-t
 
 ## Pages
 
-- [Home](https://muskan-portfolio.vercel.app/): hero, about, skills, projects, education, FAQ
-- [Projects](https://muskan-portfolio.vercel.app/projects): index of all four case studies
-- [About](https://muskan-portfolio.vercel.app/about): background, education, verifiable links, working approach
-- [Resume](https://muskan-portfolio.vercel.app/resume): the one-page CV, served directly as a PDF that opens in the browser's own reader
-- [Contact](https://muskan-portfolio.vercel.app/contact): email, LinkedIn, GitHub, university
+- [Home](https://muskan-choudhary.vercel.app/): hero, about, skills, projects, education, FAQ
+- [Projects](https://muskan-choudhary.vercel.app/projects): index of all four case studies
+- [About](https://muskan-choudhary.vercel.app/about): background, education, verifiable links, working approach
+- [Resume](https://muskan-choudhary.vercel.app/resume): the one-page CV, served directly as a PDF that opens in the browser's own reader
+- [Contact](https://muskan-choudhary.vercel.app/contact): email, LinkedIn, GitHub, university
 
 ## Case studies
 
-- [COVID-19 Pandemic Analysis](https://muskan-portfolio.vercel.app/projects/covid19-pandemic-analysis): a reproducible Python pipeline producing 13 processed datasets for 200+ countries; strongest socioeconomic signal was rural population share vs cases per million (r = −0.46). Repository: https://github.com/Heyymuskie/covid19-pandemic-analysis
-- [Cracow Property Price Model](https://muskan-portfolio.vercel.app/projects/cracow-property-price-model): web-scraped flat listings cleaned with KNN imputation, eight engineered ratio features, five-fold GridSearchCV, and a VotingRegressor beating MLP and gradient boosting on RMSE, MAE and MSLE. Repository: https://github.com/Heyymuskie/cracow-property-price-model
-- [FX Trading Performance Analysis](https://muskan-portfolio.vercel.app/projects/fx-trading-performance-analysis): 92 broker trades analysed for skew, kurtosis, drawdown and loss runs, with a 100,000-run Monte Carlo estimate of forward expectancy; win rate approximately 40%. Repository: https://github.com/Heyymuskie/fx-trading-performance-analysis
-- [Fitness Workload Regression](https://muskan-portfolio.vercel.app/projects/fitness-workload-regression): 283 Polar watch workouts flattened from nested JSON; OLS versus a linear mixed model cut calorie-prediction RMSE from 79 to 61, with duration/calories correlation of 0.92. Repository: https://github.com/Heyymuskie/fitness-workload-regression
+- [COVID-19 Pandemic Analysis](https://muskan-choudhary.vercel.app/projects/covid19-pandemic-analysis): a reproducible Python pipeline producing 13 processed datasets for 200+ countries; strongest socioeconomic signal was rural population share vs cases per million (r = −0.46). Repository: https://github.com/Heyymuskie/covid19-pandemic-analysis
+- [Cracow Property Price Model](https://muskan-choudhary.vercel.app/projects/cracow-property-price-model): web-scraped flat listings cleaned with KNN imputation, eight engineered ratio features, five-fold GridSearchCV, and a VotingRegressor beating MLP and gradient boosting on RMSE, MAE and MSLE. Repository: https://github.com/Heyymuskie/cracow-property-price-model
+- [FX Trading Performance Analysis](https://muskan-choudhary.vercel.app/projects/fx-trading-performance-analysis): 92 broker trades analysed for skew, kurtosis, drawdown and loss runs, with a 100,000-run Monte Carlo estimate of forward expectancy; win rate approximately 40%. Repository: https://github.com/Heyymuskie/fx-trading-performance-analysis
+- [Fitness Workload Regression](https://muskan-choudhary.vercel.app/projects/fitness-workload-regression): 283 Polar watch workouts flattened from nested JSON; OLS versus a linear mixed model cut calorie-prediction RMSE from 79 to 61, with duration/calories correlation of 0.92. Repository: https://github.com/Heyymuskie/fitness-workload-regression
 
 ## Quick answers
 
@@ -47,6 +47,6 @@ This site is the personal portfolio of Muskan Choudhary. It documents four end-t
 
 ## Optional
 
-- Full page content for offline or model ingestion: https://muskan-portfolio.vercel.app/llms-full.txt
-- Machine-readable sitemap: https://muskan-portfolio.vercel.app/sitemap.xml
-- Crawler directives: https://muskan-portfolio.vercel.app/robots.txt
+- Full page content for offline or model ingestion: https://muskan-choudhary.vercel.app/llms-full.txt
+- Machine-readable sitemap: https://muskan-choudhary.vercel.app/sitemap.xml
+- Crawler directives: https://muskan-choudhary.vercel.app/robots.txt

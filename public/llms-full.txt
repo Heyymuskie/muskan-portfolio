@@ -1,9 +1,9 @@
 # Muskan Choudhary — Data Analyst Portfolio (full text)
 
-This file is a plain-text rendering of every page on https://muskan-portfolio.vercel.app, intended for offline reading and for language models that cannot execute JavaScript. It contains no links that require JavaScript and no private data. Contact: muskanchy05@gmail.com. No personal contact number is published anywhere on this site.
+This file is a plain-text rendering of every page on https://muskan-choudhary.vercel.app, intended for offline reading and for language models that cannot execute JavaScript. It contains no links that require JavaScript and no private data. Contact: muskanchy05@gmail.com. No personal contact number is published anywhere on this site.
 
 ======================================================================
-1. HOME — https://muskan-portfolio.vercel.app/
+1. HOME — https://muskan-choudhary.vercel.app/
 ======================================================================
 
 H1: Muskan Choudhary
@@ -53,7 +53,7 @@ Senior Secondary (Class XII), BSEB — 72%
 Secondary (Class X), CBSE — 83%
 
 ======================================================================
-2. PROJECTS INDEX — https://muskan-portfolio.vercel.app/projects
+2. PROJECTS INDEX — https://muskan-choudhary.vercel.app/projects
 ======================================================================
 
 H1: Data analysis case studies
@@ -63,7 +63,7 @@ Each case study uses the same structure: the problem, the data, the method, key 
 
 ======================================================================
 3. CASE STUDY — COVID-19 Pandemic Analysis
-https://muskan-portfolio.vercel.app/projects/covid19-pandemic-analysis
+https://muskan-choudhary.vercel.app/projects/covid19-pandemic-analysis
 ======================================================================
 
 Kicker: Public health data engineering
@@ -111,7 +111,7 @@ Repository: https://github.com/Heyymuskie/covid19-pandemic-analysis
 
 ======================================================================
 4. CASE STUDY — Cracow Property Price Model
-https://muskan-portfolio.vercel.app/projects/cracow-property-price-model
+https://muskan-choudhary.vercel.app/projects/cracow-property-price-model
 ======================================================================
 
 Kicker: Regression modelling
@@ -154,7 +154,7 @@ Repository: https://github.com/Heyymuskie/cracow-property-price-model
 
 ======================================================================
 5. CASE STUDY — FX Trading Performance Analysis
-https://muskan-portfolio.vercel.app/projects/fx-trading-performance-analysis
+https://muskan-choudhary.vercel.app/projects/fx-trading-performance-analysis
 ======================================================================
 
 Kicker: Financial risk analytics
@@ -199,7 +199,7 @@ Repository: https://github.com/Heyymuskie/fx-trading-performance-analysis
 
 ======================================================================
 6. CASE STUDY — Fitness Workload Regression
-https://muskan-portfolio.vercel.app/projects/fitness-workload-regression
+https://muskan-choudhary.vercel.app/projects/fitness-workload-regression
 ======================================================================
 
 Kicker: Statistical modelling
@@ -243,7 +243,7 @@ Next steps: collect data across multiple users; promote Polar heart-rate zones i
 Repository: https://github.com/Heyymuskie/fitness-workload-regression
 
 ======================================================================
-7. ABOUT — https://muskan-portfolio.vercel.app/about
+7. ABOUT — https://muskan-choudhary.vercel.app/about
 ======================================================================
 
 H1: Detail-oriented analyst, built on a computer science foundation
@@ -266,7 +266,7 @@ How I work:
 - Collaboration & communication: documenting the pipeline behind every figure so results are reproducible and the reasoning survives handover. Points: pipeline docs, peer review, stakeholder updates, deadline delivery.
 
 ======================================================================
-8. RESUME — https://muskan-portfolio.vercel.app/resume
+8. RESUME — https://muskan-choudhary.vercel.app/resume
 ======================================================================
 
 This URL serves the one-page CV itself: the response is `application/pdf`, so a browser opens it in its own built-in PDF reader at full viewport. There is no separate HTML page, no embedded frame and no script — and nothing is requested at all until a visitor selects "View resume". Every "View resume" link in the site navigation, hero, footer, about, contact and closing call-to-action points at this same URL. Downloading is left to the reader's own controls.
@@ -282,7 +282,7 @@ Resume content summary:
 - Career interests: entry-level Data Analyst, Reporting Analyst, Business Intelligence Graduate.
 
 ======================================================================
-9. CONTACT — https://muskan-portfolio.vercel.app/contact
+9. CONTACT — https://muskan-choudhary.vercel.app/contact
 ======================================================================
 
 H1: Let's talk about your data.

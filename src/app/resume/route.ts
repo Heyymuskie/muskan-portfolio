@@ -35,7 +35,7 @@ export async function GET() {
       // Route handlers cannot export `metadata`, so the canonical URL for this
       // non-HTML resource is carried as an HTTP Link header, which Google
       // supports for PDFs.
-      "Link": '<https://muskan-portfolio.vercel.app/resume>; rel="canonical"',
+      "Link": '<https://muskan-choudhary.vercel.app/resume>; rel="canonical"',
     },
   });
 }

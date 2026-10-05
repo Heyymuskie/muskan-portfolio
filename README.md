@@ -3,7 +3,7 @@
 Production portfolio for **Muskan Choudhary**, an entry-level Data Analyst and final-year
 B.Tech CSE student at [Jagannath University, Jaipur](https://www.jagannathuniversity.org/).
 
-> Live: `https://muskan-portfolio.vercel.app`
+> Live: `https://muskan-choudhary.vercel.app`
 
 Built with **Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · shadcn/ui**.
 Every route is statically generated — no API routes, no database, no client-side data
@@ -158,7 +158,7 @@ vercel --prod
 2. Add the env vars **NEXT_PUBLIC_GSC_VERIFICATION** and
    **NEXT_PUBLIC_BING_VERIFICATION** once the Search Console / Bing Webmaster
    properties exist, then redeploy.
-3. Submit `https://muskan-portfolio.vercel.app/sitemap.xml` to Google Search Console
+3. Submit `https://muskan-choudhary.vercel.app/sitemap.xml` to Google Search Console
    and Bing Webmaster Tools.
 
 Built with Next.js and Tailwind CSS.
