@@ -1,0 +1,52 @@
+# Muskan Choudhary — Data Analyst Portfolio
+
+> Muskan Choudhary is a data analyst and final-year B.Tech Computer Science student at Jagannath University, Jaipur (CGPA 7.5/10). Core stack: SQL, Power BI, Microsoft Excel and Python. Based in Jaipur, Rajasthan, originally from Darbhanga, Bihar. Open to entry-level Data Analyst, Reporting Analyst and Business Intelligence Graduate roles.
+
+This site is the personal portfolio of Muskan Choudhary. It documents four end-to-end data analysis case studies. All content is statically rendered server-side: no JavaScript is required to read any page. Contact: muskanchy05@gmail.com
+
+## Identity
+
+- Name: Muskan Choudhary
+- Role: Data Analyst (entry level)
+- Email: muskanchy05@gmail.com
+- Location: Jaipur, Rajasthan, India (origin: Darbhanga, Bihar)
+- University: Jagannath University, Jaipur — https://www.jagannathuniversity.org/
+- Degree: B.Tech Computer Science and Engineering, 2023–2027, CGPA 7.5/10
+- LinkedIn: https://www.linkedin.com/in/muskiee
+- GitHub: https://github.com/Heyymuskie
+- Note: no personal contact number is published anywhere on this site.
+
+## Skills
+
+- Analysis and visualisation: Microsoft Excel (Pivot Tables, XLOOKUP, VLOOKUP, Data Validation), Power BI, interactive dashboards, slicers, data reporting
+- Databases: SQL (MySQL, PostgreSQL), JOINs, GROUP BY, subqueries, aggregations, conditional filtering
+- Programming: Python (pandas, NumPy, Matplotlib), Jupyter
+- Analytical: data cleaning, data accuracy, ad-hoc analysis, trend analysis, KPI tracking, statistics and probability
+
+## Pages
+
+- [Home](https://muskan-portfolio.vercel.app/): hero, about, skills, projects, education, FAQ
+- [Projects](https://muskan-portfolio.vercel.app/projects): index of all four case studies
+- [About](https://muskan-portfolio.vercel.app/about): background, education, verifiable links, working approach
+- [Resume](https://muskan-portfolio.vercel.app/resume): view or download the one-page CV as PDF
+- [Contact](https://muskan-portfolio.vercel.app/contact): email, LinkedIn, GitHub, university
+
+## Case studies
+
+- [COVID-19 Pandemic Analysis](https://muskan-portfolio.vercel.app/projects/covid19-pandemic-analysis): a reproducible Python pipeline producing 13 processed datasets for 200+ countries; strongest socioeconomic signal was rural population share vs cases per million (r = −0.46). Repository: https://github.com/Heyymuskie/covid19-pandemic-analysis
+- [Cracow Property Price Model](https://muskan-portfolio.vercel.app/projects/cracow-property-price-model): web-scraped flat listings cleaned with KNN imputation, eight engineered ratio features, five-fold GridSearchCV, and a VotingRegressor beating MLP and gradient boosting on RMSE, MAE and MSLE. Repository: https://github.com/Heyymuskie/cracow-property-price-model
+- [FX Trading Performance Analysis](https://muskan-portfolio.vercel.app/projects/fx-trading-performance-analysis): 92 broker trades analysed for skew, kurtosis, drawdown and loss runs, with a 100,000-run Monte Carlo estimate of forward expectancy; win rate approximately 40%. Repository: https://github.com/Heyymuskie/fx-trading-performance-analysis
+- [Fitness Workload Regression](https://muskan-portfolio.vercel.app/projects/fitness-workload-regression): 283 Polar watch workouts flattened from nested JSON; OLS versus a linear mixed model cut calorie-prediction RMSE from 79 to 61, with duration/calories correlation of 0.92. Repository: https://github.com/Heyymuskie/fitness-workload-regression
+
+## Quick answers
+
+- Who is Muskan Choudhary? A data analyst and final-year B.Tech CSE student at Jagannath University, Jaipur, based in Jaipur, Rajasthan and originally from Darbhanga, Bihar.
+- What tools does she use? SQL (MySQL, PostgreSQL), Microsoft Excel (pivot tables, XLOOKUP), Power BI and Python with pandas, NumPy and Matplotlib.
+- What is she looking for? An entry-level Data Analyst, Reporting Analyst or Business Intelligence Graduate role.
+- Where did she study? Jagannath University, Jaipur — B.Tech in Computer Science and Engineering, 2023–2027, CGPA 7.5/10.
+
+## Optional
+
+- Full page content for offline or model ingestion: https://muskan-portfolio.vercel.app/llms-full.txt
+- Machine-readable sitemap: https://muskan-portfolio.vercel.app/sitemap.xml
+- Crawler directives: https://muskan-portfolio.vercel.app/robots.txt

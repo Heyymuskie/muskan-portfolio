@@ -1,0 +1,328 @@
+# Muskan Choudhary — Data Analyst Portfolio (full text)
+
+This file is a plain-text rendering of every page on https://muskan-portfolio.vercel.app, intended for offline reading and for language models that cannot execute JavaScript. It contains no links that require JavaScript and no private data. Contact: muskanchy05@gmail.com. No personal contact number is published anywhere on this site.
+
+======================================================================
+1. HOME — https://muskan-portfolio.vercel.app/
+======================================================================
+
+H1: Muskan Choudhary
+Role: Data Analyst
+Tagline: I turn raw data into decisions people can act on.
+
+Intro: I'm Muskan Choudhary, a final-year B.Tech Computer Science student at Jagannath University, Jaipur, specialising in data analysis. I work in SQL, Excel and Power BI to clean messy datasets, build interactive dashboards and surface the trend behind the number.
+
+Origin: Darbhanga, Bihar
+Based in: Jaipur, Rajasthan
+Open to: Entry-Level Data Analyst, Reporting Analyst, Business Intelligence Graduate
+
+Quick facts:
+- Studying: B.Tech CSE, Jagannath University
+- Based in: Jaipur, Rajasthan
+- CGPA: 7.5 / 10
+- Open to: Entry-Level Data Analyst
+
+Stats:
+- 4 documented case studies
+- 7.5 B.Tech CGPA
+- 283 workouts modelled (largest single dataset analysed)
+- 200+ countries in one pipeline (COVID-19 project)
+
+About — Detail-oriented analyst, built on a computer science foundation
+I'm a final-year B.Tech Computer Science student at Jagannath University, Jaipur, looking for an entry-level Data Analyst role. A CS degree gives me the part that most analysts learn late — how data actually moves through a system — so I build pipelines that stay reproducible rather than one-off notebooks that break on the next run.
+
+Day to day I work in SQL for querying and aggregation, Excel for fast validation and pivot analysis, and Power BI for interactive dashboards. Python with pandas and NumPy is what I reach for when the data needs reshaping before anyone can answer a question from it.
+
+What I care about is the last mile: a number that a non-technical stakeholder can read, trust and act on within about ten seconds of opening the report. That means clean data, a chart that answers one question, and an honest note about what the analysis does not prove.
+
+Focus areas:
+- Data cleaning & preparation: handling missing values, removing duplicates, standardising formats and validating data before a single chart is drawn.
+- Reporting & insight: translating KPIs, distributions and trends into visual stories that a non-technical stakeholder can act on immediately.
+- Collaboration & communication: comfortable presenting findings, documenting the pipeline behind them and working to a reporting deadline with a team.
+
+Technical skills:
+- Analysis & Visualisation: Microsoft Excel, Pivot Tables, XLOOKUP / VLOOKUP, Power BI, Interactive Dashboards, Slicers, Data Reporting
+- Databases & Querying: SQL, MySQL, PostgreSQL, JOINs, GROUP BY, Subqueries, Aggregations, Conditional Filtering
+- Programming: Python, pandas, NumPy, Matplotlib, Jupyter
+- Analytical Skills: Data Cleaning, Data Accuracy, Ad-hoc Analysis, Trend Analysis, KPI Tracking, Statistics & Probability, Problem Solving
+- Core Competencies: Analytical Mindset, Logical Thinking, Verbal & Written Communication, Team Collaboration, Documentation
+
+Education:
+Jagannath University, Jaipur, Rajasthan — B.Tech in Computer Science and Engineering, 2023–2027, CGPA 7.5/10. Coursework: Database Management Systems, Data Structures & Algorithms, Python Programming, Statistics & Probability.
+Senior Secondary (Class XII), BSEB — 72%
+Secondary (Class X), CBSE — 83%
+
+======================================================================
+2. PROJECTS INDEX — https://muskan-portfolio.vercel.app/projects
+======================================================================
+
+H1: Data analysis case studies
+Four projects covering the whole path a data analyst walks: sourcing and cleaning the data, choosing a method, testing it honestly, and writing down what the result does and does not prove.
+
+Each case study uses the same structure: the problem, the data, the method, key findings, visuals, results, limitations, and next steps.
+
+======================================================================
+3. CASE STUDY — COVID-19 Pandemic Analysis
+https://muskan-portfolio.vercel.app/projects/covid19-pandemic-analysis
+======================================================================
+
+Kicker: Public health data engineering
+Status: Completed · 2024 · Role: Data cleaning · Feature engineering · EDA
+Stack: Python 3, pandas, NumPy, Matplotlib, wbdata, Jupyter
+
+At a glance: 200+ countries analysed · 13 datasets produced · 7 socioeconomic indicators · 10-month analysis window
+
+Summary: An end-to-end pipeline that turns raw JHU CSSE daily case files into 13 clean, analysis-ready datasets, then explores how the first ten months of the pandemic behaved across 200+ countries and how far socioeconomic indicators actually explain mortality.
+
+Problem: COVID-19 case data was published daily, but in a shape that made comparison almost impossible: province-level rows, cruise-ship outliers mixed into country totals, inconsistent date indexes, and socioeconomic context locked in a separate World Bank source. The goal was to build a reproducible pipeline that normalises all of it once, and then answer a sharper question than "how many cases": how much of the difference in mortality between countries is actually explained by wealth, healthcare spend and demographics?
+
+Key questions:
+1. How quickly did countries suppress exponential growth after their 100th confirmed case?
+2. Which socioeconomic indicators correlate with cases and deaths per million?
+3. Is mortality rate better explained by economics or by demography?
+
+Data: Johns Hopkins CSSE COVID-19 time series + World Bank indicators via wbdata. 200+ countries, Dec 2019 – Oct 2020, 13 processed outputs.
+Notes: province/state rows aggregated to country level before any analysis; cruise-ship and boat cases excluded from national totals; forward-filled where countries reported intermittently; pinned to the JHU CSSE snapshot from 5 October 2020 so numbers are reproducible.
+
+Method:
+1. Automated acquisition — download_data.py pulls JHU CSSE daily CSVs, World Bank indicator metadata and country-to-continent mappings, then caches everything under data/processed/.
+2. Normalisation layer — ten focused feature scripts each own one transformation and write one CSV, so any step can be re-run in isolation.
+3. Derived metrics — daily change via first differencing, cases-since-t0 reindexing off each country's 100th case, mortality = deaths / confirmed, active = confirmed − recovered − dead.
+4. Socioeconomic merge — latest available World Bank value per country joined onto the case table by country code.
+5. Reusable visualisation — a single CovidDataViz class exposes world, continent and country plots, top-N rankings, growth-factor curves and correlation heatmaps.
+
+Findings:
+- Most countries flattened the curve within 30–40 days (30–40 days).
+- Rural population share is the strongest economic signal: r = −0.46 between rural population % and cases per million.
+- Healthcare spend vs deaths per million (+0.38) is better read as "richer countries test and report more" than as causation.
+- Life expectancy does not predict mortality linearly: R² = 0.074.
+
+Results (correlation summary, Pearson, Yemen excluded as an outlier):
+- Rural population % → cases / million: −0.46
+- Healthcare spend → deaths / million: +0.38
+- Life expectancy → mortality %: R² 0.074 (non-linear)
+- Countries analysed: 200+
+
+Limitations: reported cases are not true infections; World Bank indicators are annual snapshots; correlations are ecological and do not imply individual-level causality; excluding Yemen may bias estimates; the window stops in October 2020.
+
+Next steps: extend the window through 2022; move to multivariate regression; add Google Mobility Reports; publish CovidDataViz as a Streamlit dashboard with scheduled refresh.
+
+Repository: https://github.com/Heyymuskie/covid19-pandemic-analysis
+
+======================================================================
+4. CASE STUDY — Cracow Property Price Model
+https://muskan-portfolio.vercel.app/projects/cracow-property-price-model
+======================================================================
+
+Kicker: Regression modelling
+Status: Completed · 2024 · Role: Feature engineering · Model selection · Evaluation
+Stack: Python 3, scikit-learn, pandas, NumPy, Matplotlib, Jupyter
+
+At a glance: 29 features after engineering · 5 cross-validation folds · 4 models benchmarked · 80/20 train-test split
+
+Summary: A full modelling workflow on web-scraped flat listings in Cracow: dedupe and KNN-impute the raw scrape, engineer eight ratio features, then benchmark a neural network and gradient boosting against a voting ensemble to predict sale price.
+
+Problem: Property listings are noisy — duplicate adverts, missing room counts, inconsistent districts and amenities buried inside free-text descriptions. A price model trained on the raw scrape would learn the scrape's defects. The brief: identify which features actually move price, prove whether an ensemble beats the individual regressors, and quantify how much of pricing is location rather than the flat itself.
+
+Data: web-scraped residential flat listings from a Polish real-estate portal, thousands of listings, PLN, Cracow only, 29 final features.
+Notes: duplicates detected on Title and resolved to the most recent listing; Amount clipped to the 2.5–97.5 percentile band and Area to the 1–99 band; parking parsed out of free-text descriptions; missing numerics imputed with KNNImputer (k = 5).
+
+Method:
+1. Dedupe and filter — sort newest-first, keep one row per Title, restrict to City = kraków, Currency = pln, Property = flat, known district and seller.
+2. Text to structure — parking status (covered, garage, street, none) parsed from the description.
+3. KNN imputation — Amount, Area, Rooms and Bathrooms filled from their five nearest neighbours.
+4. Ratio feature engineering — eight derived features: log(Area), an amenity count, space-per-amenity, rooms-to-bathrooms, total rooms, area-per-room and their interactions.
+5. Pipeline and tuning — ColumnTransformer with OneHotEncoder(handle_unknown='ignore') and MinMaxScaler; GridSearchCV with 5-fold CV on neg_root_mean_squared_error.
+
+Findings:
+- The voting ensemble wins on every metric: a uniform VotingRegressor of the tuned MLP and GradientBoostingRegressor beat both constituents and the dummy baseline on RMSE, MAE and MSLE.
+- Area is the primary price driver — predicted price against area is close to linear.
+- District beats flat characteristics: Stare Miasto and Zwierzyniec at the top, Bieżanów and Łagiewniki at the bottom.
+- Parking and seller type move the mean asking price.
+
+Results (held-out test set, 5-fold CV, random_state = 123, negative RMSE scoring):
+- DummyRegressor (baseline): reference
+- MLPRegressor (100,100,100): beaten by ensemble
+- GradientBoostingRegressor: beaten by ensemble
+- VotingRegressor (MLP + GBR): best RMSE / MAE / MSLE
+
+Limitations: listing-quality amenities can leak into the Bool Sum feature; random splitting ignores time; the model is Cracow-specific; sample size after cleaning was not recorded; scraped listings carry selection bias.
+
+Next steps: temporal cross-validation; SHAP values for per-prediction explanation; benchmark XGBoost and LightGBM; add distance-to-centre features; serve get_pred() through a small FastAPI endpoint.
+
+Repository: https://github.com/Heyymuskie/cracow-property-price-model
+
+======================================================================
+5. CASE STUDY — FX Trading Performance Analysis
+https://muskan-portfolio.vercel.app/projects/fx-trading-performance-analysis
+======================================================================
+
+Kicker: Financial risk analytics
+Status: In progress · 2025 · Role: Data cleaning · Statistical analysis · Simulation
+Stack: Python 3, SciPy, pandas, Matplotlib, Jupyter
+
+At a glance: 92 trades analysed · 100k Monte Carlo runs · 6+ instruments · ~40% win rate
+
+Summary: Walk-forward performance review of an algorithmic trading system over 92 broker-reported trades: distribution fitting, drawdown and loss-run statistics, and a 100,000-run Monte Carlo simulation to estimate forward expectancy.
+
+Problem: A single profit-and-loss number says almost nothing about a trading system — a strategy can be net profitable and still be one losing streak away from ruin. The brief: characterise the shape of returns, quantify drawdown and consecutive-loss risk, look for genuine timing effects rather than noise, and estimate what the next 100 trades are likely to deliver.
+
+Data: broker-generated trade report (MetaTrader / MQL4 CSV export); 92 closed trades, about one month, FX pairs and commodities. The dataset is intentionally private — reproduction requires your own broker export.
+Notes: magic-number identifier corrected from 12345 to 4444; price, lot and completeness checks passed with no missing values; duration, direction and stop-loss/take-profit flags parsed from the Comment column.
+
+Method:
+1. Repair and validate — fix the magic-number mismatch, validate prices and lot sizes, normalise symbol names.
+2. Feature extraction — net profit = Profit + Swap + Commission; profit-per-lot; holding period in minutes; SL/TP exit flags.
+3. Distributional analysis — histogram plus skewness and kurtosis, empirical CDF tested against power-law and exponential fits.
+4. Risk statistics — peak-to-trough drawdown, its duration, and loss-run lengths modelled with a geometric distribution.
+5. Monte Carlo forward estimate — 100,000 simulations of 100 trades, resampling observed profit-per-lot with replacement at a fixed 0.01 lot.
+
+Findings:
+- Positive total P&L but negative median trade — small frequent stop-loss hits paid for by occasional large wins (skewed right).
+- Returns are leptokurtic — fat tails mean extreme outcomes are more likely than a Gaussian predicts.
+- Two hours show a real edge: median profit per lot positive for trades opened at 14:00 and 16:00, aligning with macro news releases and the European session close.
+- Loss runs are the real exposure — with roughly a 60% loss rate, ten consecutive losses is well inside the realm of possibility.
+
+Results (median profit per lot by symbol and direction):
+- USDCHF (short): best performer
+- US500 (long): worst performer
+- Win rate: ~40%
+- Loss rate: ~60%
+- Trade duration: 2 minutes to about 4 days
+- Monte Carlo simulations: 100,000
+
+Limitations: 92 trades is a small sample; only closed trades are present; outcomes are autocorrelated, breaking Monte Carlo independence; no spread, slippage or commission model; the 14:00/16:00 pattern may be chance.
+
+Next steps: roll the window forward; layer in transaction costs; benchmark against buy-and-hold and random-entry baselines; build an automated P&L and drawdown dashboard.
+
+Repository: https://github.com/Heyymuskie/fx-trading-performance-analysis
+
+======================================================================
+6. CASE STUDY — Fitness Workload Regression
+https://muskan-portfolio.vercel.app/projects/fitness-workload-regression
+======================================================================
+
+Kicker: Statistical modelling
+Status: Completed · 2024 · Role: JSON extraction · Statistical modelling · Diagnostics
+Stack: Python 3, statsmodels, SciPy, pandas, Matplotlib, Jupyter
+
+At a glance: 283 workouts analysed · 6 activity types · RMSE improvement 79 → 61 · duration/calories correlation 0.92
+
+Summary: A year of Polar watch exports — 283 workouts flattened from nested JSON — used to compare strength against cardio physiology and to test whether a linear mixed model predicts calories burned better than plain regression.
+
+Problem: Fitness trackers export deeply nested JSON with heart-rate samples, GPS traces and device metadata interleaved; turning that into an analysis-ready table is most of the work. The real question: can session duration and peak heart rate reliably predict energy expenditure, and does treating activity type as a random effect materially improve that prediction?
+
+Data: personal Polar Flow export (training-session-*.json); 283 workouts over about a year, 6 activity types. Raw health data stays private.
+Notes: GPS coordinates and ascent/descent dropped for privacy; indoor sessions flagged by a null distance field; IQR filtering (k = 1.5) applied to duration, calories and 99th-percentile heart rate before modelling.
+
+Method:
+1. Flatten the JSON — walk each nested export and pull heartRateAvg2, heartRateStd and the 1/25/50/75/99th percentile heart rates into flat columns.
+2. Derive session features — duration in minutes, isStrength from the sport name, isInside from a null distance.
+3. Exploratory pass — heart-rate histograms, calorie time series, intensity scatters, hour-of-day and day-of-week bar charts.
+4. Model ladder — baseline OLS on duration, per-sport OLS, OLS with 99th-percentile heart rate, then a linear mixed model with a random slope for duration by activity type.
+5. Diagnostics — VIF, Goldfeld-Quandt, Shapiro-Wilk, Q-Q plot and standardised residual plots.
+
+Findings:
+- A mixed model cuts error by 23%: RMSE 79 → 61.
+- Duration alone explains 85% of variance (R² = 0.85; duration/calories correlation 0.92).
+- Sport-specific fits diverge sharply: cycling R² = 0.98, treadmill running 0.96, walking 0.82, strength training 0.44.
+- Training follows a bimodal clock: peaks at 12:00 and 20:00, with no strong day-of-week preference.
+
+Results:
+- OLS, duration only: RMSE 79, R² 0.85
+- OLS, cycling: R² 0.98
+- OLS, treadmill running: R² 0.96
+- OLS, walking: R² 0.82
+- OLS, strength training: R² 0.44
+- Linear mixed model: RMSE 61, best overall
+
+Limitations: running had only two sessions and was excluded; indoor sessions have no GPS or distance; the data is one person's habits; the mixed model is user-specific; IQR filtering may have removed legitimate sessions.
+
+Next steps: collect data across multiple users; promote Polar heart-rate zones into intensity features; validate against published MET tables; forecast weekly trends with Prophet and ship a Streamlit dashboard.
+
+Repository: https://github.com/Heyymuskie/fitness-workload-regression
+
+======================================================================
+7. ABOUT — https://muskan-portfolio.vercel.app/about
+======================================================================
+
+H1: Detail-oriented analyst, built on a computer science foundation
+
+Background: Muskan Choudhary is a final-year B.Tech Computer Science student at Jagannath University, Jaipur, who works in SQL, Excel and Power BI. A computer science background covers the part many analysts learn late — how data moves through a system — so her pipelines stay reproducible instead of breaking on the next run.
+
+Verifiable links:
+- Education: Jagannath University, Jaipur — https://www.jagannathuniversity.org/
+- Source code: https://github.com/Heyymuskie
+- Professional profile: https://www.linkedin.com/in/muskiee
+
+Origin: Darbhanga, Bihar. Based in: Jaipur, Rajasthan.
+Open to: Entry-Level Data Analyst, Reporting Analyst, Business Intelligence Graduate.
+
+Core coursework: Database Management Systems, Data Structures & Algorithms, Python Programming, Statistics & Probability.
+
+How I work:
+- Data cleaning & preparation: missing values, duplicate removal, format standardisation and validation — done before analysis, not after a number looks wrong. Points: deduplication, imputation, type validation, range checks.
+- Reporting & insights: turning KPIs and distributions into a visual narrative a stakeholder can read in seconds. Points: KPI design, dashboard layout, trend framing, executive summary.
+- Collaboration & communication: documenting the pipeline behind every figure so results are reproducible and the reasoning survives handover. Points: pipeline docs, peer review, stakeholder updates, deadline delivery.
+
+======================================================================
+8. RESUME — https://muskan-portfolio.vercel.app/resume
+======================================================================
+
+H1: Muskan Choudhary — Curriculum Vitae
+Sub: Data Analyst · SQL · Power BI · Excel · Python · Jaipur, Rajasthan
+
+The resume is a one-page PDF. On laptops and desktops it is displayed in a full-height viewer. On small screens (mobile and tablet) the page shows the navigation and hero with two actions.
+
+- View: opens the PDF in the browser's built-in reader — https://muskan-portfolio.vercel.app/Muskan-Choudhary-Resume.pdf
+- Download: same URL, downloaded with the browser's normal download behaviour.
+
+Resume content summary:
+- Header: Muskan Choudhary — Data Analyst | SQL | Power BI | Excel | Python. Email muskanchy05@gmail.com, Jaipur, Rajasthan, linkedin.com/in/muskiee
+- Professional summary: detail-oriented final-year B.Tech Computer Science student seeking an entry-level Data Analyst role; hands-on with SQL, data cleaning, Microsoft Excel (pivot tables, XLOOKUP) and Power BI; experienced in building interactive dashboards, ad-hoc and trend analysis.
+- Education: Jagannath University, Jaipur — B.Tech CSE, 2023–2027, CGPA 7.5/10; Senior Secondary (Class XII), BSEB 72%; Secondary (Class X), CBSE 83%.
+- Skills: Excel (pivot tables, VLOOKUP, XLOOKUP, data validation, advanced formulas), Power BI, interactive dashboards, slicers, data reporting; SQL (MySQL, PostgreSQL) with joins, group by, subqueries, aggregations, conditional filtering; Python (pandas, NumPy, Matplotlib); data cleaning, data accuracy, ad-hoc analysis, trend analysis, KPI tracking.
+- Project: Sales Performance & Trend Dashboard (SQL, Power BI, Excel) — cleaned and transformed raw transactional datasets, wrote optimised SQL for monthly revenue trends and customer segments, built an interactive Power BI dashboard with slicers, validated against Excel pivot tables, documented the data preparation pipeline.
+- Career interests: entry-level Data Analyst, Reporting Analyst, Business Intelligence Graduate.
+
+======================================================================
+9. CONTACT — https://muskan-portfolio.vercel.app/contact
+======================================================================
+
+H1: Let's talk about your data.
+
+Muskan Choudhary is looking for an entry-level Data Analyst, Reporting Analyst or Business Intelligence Graduate position.
+
+Channels:
+- Email: muskanchy05@gmail.com — fastest route for roles, briefs and referrals.
+- LinkedIn: https://www.linkedin.com/in/muskiee — connect for recommendations and role discussions.
+- GitHub: https://github.com/Heyymuskie — source for every case study on this site.
+- University: https://www.jagannathuniversity.org/ — Jagannath University, Jaipur, Rajasthan, India.
+
+Availability:
+- Roles: Entry-Level Data Analyst · Reporting Analyst · Business Intelligence Graduate
+- Location: Jaipur, Rajasthan (open to remote)
+- Origin: Darbhanga, Bihar
+- Notice: available immediately for internships and graduate roles
+
+======================================================================
+10. FAQ (answer-first, also exposed as JSON-LD FAQPage)
+======================================================================
+
+Q: Who is Muskan Choudhary?
+A: Muskan Choudhary is a data analyst and final-year B.Tech Computer Science student at Jagannath University, Jaipur, based in Jaipur, Rajasthan and originally from Darbhanga, Bihar. She works in SQL, Power BI, Excel and Python.
+
+Q: What does Muskan Choudhary do as a data analyst?
+A: She cleans and validates raw datasets, writes SQL queries to aggregate business KPIs, builds interactive Power BI and Excel dashboards, and documents each analysis so the numbers can be reproduced and trusted.
+
+Q: Which tools does Muskan use for data analysis?
+A: SQL (MySQL and PostgreSQL), Microsoft Excel including pivot tables and XLOOKUP, Power BI for dashboards, and Python with pandas, NumPy and Matplotlib for data wrangling and visualisation.
+
+Q: Where did Muskan Choudhary study?
+A: She is completing a B.Tech in Computer Science and Engineering at Jagannath University in Jaipur, Rajasthan, India, with a CGPA of 7.5 out of 10.
+
+Q: What kind of role is Muskan Choudhary looking for?
+A: An entry-level Data Analyst, Reporting Analyst or Business Intelligence Graduate position where she can work on dashboards, ad-hoc analysis and KPI reporting.
+
+Q: What data projects has Muskan Choudhary worked on?
+A: Four documented case studies: a COVID-19 pandemic data pipeline across 200+ countries, a Cracow property price regression model, an FX trading performance analysis with Monte Carlo simulation, and a fitness workload regression on 283 workouts.
