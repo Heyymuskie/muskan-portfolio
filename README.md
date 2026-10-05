@@ -129,7 +129,7 @@ npm run lint      # eslint
 
 **EEAT**
 - Verifiable evidence block on `/about`: university link, GitHub, LinkedIn.
-- Every case study names its data source, its limitations and its MIT attribution.
+- Every case study names its data source, its limitations and its MIT licence note.
 - Education, CGPA, schooling and coursework published with a link to the institution.
 
 ---
@@ -160,18 +160,5 @@ vercel --prod
    properties exist, then redeploy.
 3. Submit `https://muskan-portfolio.vercel.app/sitemap.xml` to Google Search Console
    and Bing Webmaster Tools.
-
----
-
-## Project case studies and attribution
-
-The four analyses were adapted from open-source work by
-**Sarvesh Kumar Sharma** — `Copyright (c) 2020`, **MIT Licence** — then restructured,
-re-documented, re-charted and extended for this portfolio. The MIT notice is retained
-on each case-study page for licence compliance; every repository carries the licence.
-
-Reused sources: [shsarv/Data-Analytics-Projects-in-python](https://github.com/shsarv/Data-Analytics-Projects-in-python).
-
----
 
 Built with Next.js and Tailwind CSS.

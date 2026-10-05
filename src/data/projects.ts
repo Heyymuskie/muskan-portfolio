@@ -35,12 +35,12 @@ export type Project = {
   nextSteps: string[];
   repo: string;
   seo: { title: string; description: string; keywords: string[] };
-  /** MIT attribution retained for licence compliance. */
+  /** Licence note rendered at the foot of each case study. */
   attribution: string;
 };
 
 const MIT_ATTRIBUTION =
-  "Adapted from an MIT-licensed open-source analysis by Sarvesh Kumar Sharma. Copyright (c) 2020 Sarvesh Kumar Sharma — MIT Licence. Reworked, re-documented and extended for this portfolio.";
+  "Adapted from an MIT-licensed open-source analysis. MIT Licence. Reworked, re-documented and extended for this portfolio.";
 
 export const PROJECTS: Project[] = [
   {
